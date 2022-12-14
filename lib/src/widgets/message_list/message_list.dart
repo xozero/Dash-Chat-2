@@ -213,8 +213,7 @@ class _MessageListState extends State<MessageList> {
   /// show scroll-to-bottom btn and LoadEarlier behaviour
   Future<void> _onScroll() async {
     bool topReached =
-        scrollController.offset <= 10 &&
-            !scrollController.position.outOfRange;
+        scrollController.offset <= 100;// && !scrollController.position.outOfRange;
     if (topReached &&
         widget.messageListOptions.onLoadEarlier != null &&
         !isLoadingMore) {
